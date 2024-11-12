@@ -4,8 +4,7 @@ Data Engineering Project on AWS
 ## Project Overview
 This project establishes an end-to-end data pipeline using AWS for ingesting, validating, and transforming data from IoT sensors and websites. The pipeline is designed to handle real-time data, perform quality checks, and aggregate insights, enabling downstream analytics and machine learning.
 
-## Architecture
-### --> Workflow
+## Architecture Workflow 
 
 ### Data Ingestion:
 Data from IoT sensors and websites is stored in the S3 Bronze Layer (Landing Zone).
