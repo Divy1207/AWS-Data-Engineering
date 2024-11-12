@@ -62,7 +62,9 @@ Store aggregated data in the Gold Layer for seamless integration with BI dashboa
 
 ### Technologies Used
 AWS S3: Data lake storage for raw, validated, and aggregated data.
+
 AWS Lambda: Event-driven serverless functions for detecting new data arrivals.
+
 AWS Glue: Data integration service for ETL operations, handling quality checks and transformations.
 
 ## Getting Started
