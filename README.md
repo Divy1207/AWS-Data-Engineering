@@ -67,6 +67,10 @@ AWS Lambda: Event-driven serverless functions for detecting new data arrivals.
 
 AWS Glue: Data integration service for ETL operations, handling quality checks and transformations.
 
+Glue Data Catalog: Metadata management
+
+AWS Athena - Ad-hoc analysis
+
 ## Getting Started
 Prerequisites
 AWS Account with access to S3, Lambda, Glue, and IAM services.
