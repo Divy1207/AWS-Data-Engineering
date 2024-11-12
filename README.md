@@ -1,4 +1,4 @@
-# AWS_data_engineering
+# Data Engineering on AWS
 Data Engineering Project on AWS
 
 ## Project Overview
