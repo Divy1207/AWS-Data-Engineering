@@ -1,0 +1,15 @@
+{
+    "name": "segment_loyalty_pts",
+    "displayName": "Segment Loyalty Points",
+    "description": "This tranformation will segment the customers based on loyalty points",
+    "functionName": "segment_loyalty_pts",
+    "parameters": [
+        {
+        "name": "fieldName",
+        "displayName": "Field Name",
+        "type": "string",
+        "description": "Field Name which contains loyalty points"
+        }
+    ]
+}
+
