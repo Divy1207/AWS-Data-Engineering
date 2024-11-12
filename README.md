@@ -1,3 +1,6 @@
+![Final AWS drawio](https://github.com/user-attachments/assets/c7720371-3c52-40d3-8345-3228a78c40ea)
+
+
 # Data Engineering on AWS
 Data Engineering Project on AWS
 
