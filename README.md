@@ -114,8 +114,8 @@ PII Redaction: Implemented redaction of Personally Identifiable Information (PII
 Applied data privacy regulations (e.g., GDPR and HIPAA) to ensure that sensitive data is securely handled and only authorized personnel can access it.
 Introduced data governance policies that restrict unauthorized access and ensure that only compliant, non-sensitive data is retained.
 
-##Conclusion
+## Conclusion
 This project showcases a robust and scalable data pipeline on AWS. By integrating real-time ingestion, validation, and transformation, it supports reliable data storage and downstream analytics for BI and machine learning. The implementation of data validation checks, metadata management, Athena integration, automated alerting, and strong data governance ensures high-quality data delivery, compliance with regulations, and transparency in the data pipeline.
+
 Introduced data governance policies that restrict unauthorized access and ensure that only compliant, non-sensitive data is retained.
-Conclusion
-This project showcases a robust and scalable data pipeline on AWS. By integrating real-time ingestion, validation, and transformation, it supports reliable data storage and downstream analytics for BI and machine learning. The implementation of data validation checks, metadata management, Athena integration, automated alerting, and strong data governance ensures high-quality data delivery, compliance with regulations, and transparency in the data pipeline.
+
