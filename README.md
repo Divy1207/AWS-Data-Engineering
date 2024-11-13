@@ -9,7 +9,7 @@
   ├── config
   │   └── s3_paths.yml
   ├── README.md
-  └── requirements.txt```
+  └── requirements.txt
 
 
 # Data Engineering on AWS
