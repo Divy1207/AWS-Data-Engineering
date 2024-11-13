@@ -1,5 +1,17 @@
 ![Final AWS drawio](https://github.com/user-attachments/assets/c7720371-3c52-40d3-8345-3228a78c40ea)
 
+aws-data-engineering-project
+├── src
+│   ├── lambdas
+│   │   └── event_detection_lambda.py
+│   ├── glue_jobs
+│   │   └── data_quality_checks.py
+├── config
+│   └── s3_paths.yml
+├── README.md
+└── requirements.txt
+
+
 # Data Engineering on AWS
 Data Engineering Project on AWS
 
