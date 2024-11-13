@@ -1,5 +1,14 @@
 ![Final AWS drawio](https://github.com/user-attachments/assets/c7720371-3c52-40d3-8345-3228a78c40ea)
 
+├── src
+│   ├── lambdas
+│   │   └── event_detection_lambda.py    # Lambda code to detect S3 events and invoke Glue jobs
+│   ├── glue_jobs
+│   │   └── data_quality_checks.py       # Glue job script to run quality checks and transformations
+├── config
+│   └── s3_paths.yml                     # Configuration file for S3 prefixes and paths
+├── README.md
+└── requirements.txt                     # Python dependencies
 
 # Data Engineering on AWS
 Data Engineering Project on AWS
