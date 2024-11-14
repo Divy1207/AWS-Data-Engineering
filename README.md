@@ -1,4 +1,5 @@
-![Updated_AWS](https://github.com/user-attachments/assets/9f431074-5e8f-42aa-93a4-e79649ec5b42)
+![Updated_AWS drawio](https://github.com/user-attachments/assets/433b8117-2124-487c-8eb4-82a3fe61b7a5)
+
 
 
 # Data Engineering on AWS
