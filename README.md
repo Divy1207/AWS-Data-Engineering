@@ -1,5 +1,4 @@
-![Updated_AWS](https://github.com/user-attachments/assets/492ebba2-c7f3-415c-9eb4-ebdcc25e754c)
-
+![Updated_AWS2](https://github.com/user-attachments/assets/5e2922f7-fea7-4c84-abc6-37c6aca71e59)
 
 
 # Data Engineering on AWS
