@@ -1,4 +1,4 @@
-![Updated_AWS drawio](https://github.com/user-attachments/assets/433b8117-2124-487c-8eb4-82a3fe61b7a5)
+![Updated_AWS](https://github.com/user-attachments/assets/492ebba2-c7f3-415c-9eb4-ebdcc25e754c)
 
 
 
