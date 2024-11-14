@@ -1,4 +1,5 @@
-![Final AWS](https://github.com/user-attachments/assets/9a9bf825-a828-4322-91e3-dfc0c38e7790)
+![Updated_AWS](https://github.com/user-attachments/assets/9f431074-5e8f-42aa-93a4-e79649ec5b42)
+
 
 # Data Engineering on AWS
 Data Engineering Project on AWS
