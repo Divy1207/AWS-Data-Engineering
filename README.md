@@ -4,7 +4,7 @@
 
 
 # Data Solutions Architecture on AWS
-Data Engineering Project on AWS
+
 
 ## Project Overview
 This project establishes an end-to-end data pipeline using AWS for ingesting, validating, and transforming data from IoT sensors and websites. The pipeline is designed to handle real-time data, perform quality checks, and aggregate insights, enabling downstream analytics and machine learning.
