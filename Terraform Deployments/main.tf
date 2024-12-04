@@ -1,3 +1,4 @@
+#S3 Deployment
 # Provider configuration
 provider "aws" {
   region = "ca-central-1"
@@ -5,7 +6,7 @@ provider "aws" {
 
 # Create an S3 Bucket
 resource "aws_s3_bucket" "my_bucket" {
-  bucket = "my-divy-12" # Replace with a globally unique name
+  bucket = "my-divy-12"
   acl    = "private"
 
 }
