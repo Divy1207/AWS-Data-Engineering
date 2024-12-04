@@ -43,10 +43,10 @@ spark = glueContext.spark_session
 job = Job(glueContext)
 job.init(args['JOB_NAME'], args)
 
-# Script generated for node Amazon S3
+# Script for node Amazon S3
 AmazonS3_node1722975761665 = glueContext.create_dynamic_frame.from_options(format_options={}, connection_type="s3", format="parquet", connection_options={"paths": ["s3://retail-project-demo/orders/landing/"], "recurse": True}, transformation_ctx="AmazonS3_node1722975761665")
 
-# Script generated for node MySQL
+# Script for node MySQL
 MySQL_node1722975797327 = glueContext.create_dynamic_frame.from_options(
     connection_type = "mysql",
     connection_options = {
@@ -57,42 +57,42 @@ MySQL_node1722975797327 = glueContext.create_dynamic_frame.from_options(
     transformation_ctx = "MySQL_node1722975797327"
 )
 
-# Script generated for node Join
+# Script for node Join
 AmazonS3_node1722975761665DF = AmazonS3_node1722975761665.toDF()
 MySQL_node1722975797327DF = MySQL_node1722975797327.toDF()
 Join_node1722975831864 = DynamicFrame.fromDF(AmazonS3_node1722975761665DF.join(MySQL_node1722975797327DF, (AmazonS3_node1722975761665DF['order_status'] == MySQL_node1722975797327DF['status_name']), "left"), glueContext, "Join_node1722975831864")
 
-# Script generated for node SQL Query
+# Script for node SQL Query
 SqlQuery0 = '''
 select order_id,order_last_updated,customer_id,order_status,
 coalesce(status_name,'INVALID') as status_check from myDataSource
 '''
 SQLQuery_node1722976223007 = sparkSqlQuery(glueContext, query = SqlQuery0, mapping = {"myDataSource":Join_node1722975831864}, transformation_ctx = "SQLQuery_node1722976223007")
 
-# Script generated for node Conditional Router
+# Script for node Conditional Router
 ConditionalRouter_node1722976358750 = threadedRoute(glueContext,
   source_DyF = SQLQuery_node1722976223007,
   group_filters = [GroupFilter(name = "invalid_orders", filters = lambda row: (bool(re.match("INVALID", row["status_check"])))), GroupFilter(name = "default_group", filters = lambda row: (not(bool(re.match("INVALID", row["status_check"])))))])
 
-# Script generated for node default_group
+# Script for node default_group
 default_group_node1722976358910 = SelectFromCollection.apply(dfc=ConditionalRouter_node1722976358750, key="default_group", transformation_ctx="default_group_node1722976358910")
 
-# Script generated for node invalid_orders
+# Script for node invalid_orders
 invalid_orders_node1722976358939 = SelectFromCollection.apply(dfc=ConditionalRouter_node1722976358750, key="invalid_orders", transformation_ctx="invalid_orders_node1722976358939")
 
-# Script generated for node Change Schema
+# Script for node Change Schema
 ChangeSchema_node1722976449747 = ApplyMapping.apply(frame=default_group_node1722976358910, mappings=[("order_last_updated", "timestamp", "order_last_updated", "timestamp"), ("customer_id", "int", "customer_id", "int"), ("order_id", "int", "order_id", "int"), ("order_status", "string", "order_status", "string")], transformation_ctx="ChangeSchema_node1722976449747")
 
-# Script generated for node Change Schema
+# Script for node Change Schema
 ChangeSchema_node1722976472430 = ApplyMapping.apply(frame=invalid_orders_node1722976358939, mappings=[("order_last_updated", "timestamp", "order_last_updated", "timestamp"), ("customer_id", "int", "customer_id", "int"), ("order_id", "int", "order_id", "int"), ("order_status", "string", "order_status", "string")], transformation_ctx="ChangeSchema_node1722976472430")
 
-# Script generated for node Amazon S3
+# Script for node Amazon S3
 AmazonS3_node1722976771979 = glueContext.write_dynamic_frame.from_options(frame=AmazonS3_node1722975761665, connection_type="s3", format="glueparquet", connection_options={"path": "s3://retail-project-demo/orders/archive/", "partitionKeys": []}, format_options={"compression": "snappy"}, transformation_ctx="AmazonS3_node1722976771979")
 
-# Script generated for node Amazon S3
+# Script for node Amazon S3
 AmazonS3_node1722976531225 = glueContext.write_dynamic_frame.from_options(frame=ChangeSchema_node1722976449747, connection_type="s3", format="glueparquet", connection_options={"path": "s3://retail-project-demo/orders/staging/", "partitionKeys": []}, format_options={"compression": "snappy"}, transformation_ctx="AmazonS3_node1722976531225")
 
-# Script generated for node Amazon S3
+# Script for node Amazon S3
 AmazonS3_node1722976550983 = glueContext.write_dynamic_frame.from_options(frame=ChangeSchema_node1722976472430, connection_type="s3", format="glueparquet", connection_options={"path": "s3://retail-project-demo/orders/discarded/", "partitionKeys": []}, format_options={"compression": "snappy"}, transformation_ctx="AmazonS3_node1722976550983")
 
 s3_client = boto3.client('s3')
