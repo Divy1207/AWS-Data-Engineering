@@ -3,7 +3,7 @@
 
 
 
-# Data Engineering on AWS
+# Data Solutions Architecture on AWS
 Data Engineering Project on AWS
 
 ## Project Overview
