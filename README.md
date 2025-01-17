@@ -28,13 +28,12 @@ Valid data is moved to the Silver Layer in S3 for further processing.
 Aggregations and insights are then developed on validated data to enable meaningful analysis.
 
 ### Serving Layer:
-Aggregated data is loaded into the S3 Gold Layer (Serving Zone) to support BI dashboards and machine learning models.
+Aggregated data is loaded into the Redshift (Serving Zone) to support BI dashboards and machine learning models.
 
 ## Components
-1. S3 Buckets (Bronze, Silver, Gold)
+1. S3 Buckets (Bronze, Silver)
 Bronze Layer: Raw data is initially stored here. It serves as the data landing zone.
 Silver Layer: Contains validated data after quality checks, ready for aggregations.
-Gold Layer: Stores aggregated and refined data for analytics, BI, and ML.
 
 2. AWS Lambda
 Function: Detects data arrival events in the Bronze Layer.
@@ -71,7 +70,9 @@ AWS Glue: Data integration service for ETL operations, handling quality checks a
 
 Glue Data Catalog: Metadata management
 
-AWS Athena - Ad-hoc analysis
+AWS Athena: Ad-hoc analysis
+
+AWS Redshift: Data Warehousing 
 
 ## Getting Started
 Prerequisites
